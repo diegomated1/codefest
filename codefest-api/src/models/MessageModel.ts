@@ -29,7 +29,7 @@ export class MessageModel {
         return new Promise(async (res, rej) => {
             if(!this.client) throw new ServiceError("Error de conexion");
             try {
-                const query = "SELECT * FROM message_group WHERE group_id = $1";
+                const query = "SELECT * FROM message_group WHERE group_id = $1 ORDER BY created_date";
                 const values = [group_id];
                 const result = await this.client.query<IMessageGroup>(query, values);
                 const messages = result.rows;

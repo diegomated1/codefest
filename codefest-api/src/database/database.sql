@@ -8,6 +8,8 @@ DROP TABLE IF EXISTS user_event;
 DROP TABLE IF EXISTS comment;
 DROP TABLE IF EXISTS question;
 DROP TABLE IF EXISTS rate;
+DROP TABLE IF EXISTS message_users;
+DROP TABLE IF EXISTS message_group;
 
 CREATE TABLE users (
     id UUID PRIMARY KEY,
@@ -100,7 +102,7 @@ CREATE TABLE message_users (
     sender_id UUID NOT NULL,
     receiver_id UUID NOT NULL,
     content TEXT,
-    created_date Date,
+    created_date TIMESTAMP NOT NULL,
     FOREIGN KEY (sender_id) REFERENCES users(id),
     FOREIGN KEY (receiver_id) REFERENCES users(id)
 );
@@ -110,7 +112,7 @@ CREATE TABLE message_group (
     group_id UUID NOT NULL,
     sender_id UUID NOT NULL,
     content TEXT,
-    created_date Date,
+    created_date TIMESTAMP NOT NULL,
     FOREIGN KEY (group_id) REFERENCES groups(id),
     FOREIGN KEY (sender_id) REFERENCES users(id)
 );
