@@ -9,6 +9,7 @@ export const routes = {
 	"dashboard": "/dashboard",
 	"teamCreator": "/team/creator",
 	"teamChat": "/team/chat",
+	"searchFriends":"/friends/search",
 	"users": {
 		"edit": "/users/edit"
 	},

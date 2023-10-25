@@ -15,6 +15,7 @@ import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin";
 import { ChatTeam } from "../pages/chatTeam/ChatTeam";
 import { EventCreate } from "../pages/createEvent/CreateEvent";
 import { FinalEvent } from "../pages/finalEvent/FinalEvent";
+import { SearchFriends } from "../pages/searchFriends/searchFriends";
 
 export const AppRoutes = () => {
   const { user, rol } = useAuth();
@@ -37,6 +38,9 @@ export const AppRoutes = () => {
 		<Route path={routes.teamChat} element={<ChatTeam />} />
 		<Route path={routes.finalevent} element={<FinalEvent />} />
 		
+		<Route path={routes.searchFriends} element={<SearchFriends />} />
+
+
         </Route>
         <Route path={routes.errors.E404} element={<Error404 />} />
         <Route path={routes.errors.E500} element={<Error500 />} />
