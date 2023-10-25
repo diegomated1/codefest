@@ -3,7 +3,7 @@ import { validate } from "uuid";
 
 import { UserPutValidator } from "../utils/validators/UserValidator";
 import { UserService } from "../services/UserService";
-import { Authorize, Controller, FromBody, FromParam, Get, Post, Put } from "../router/router";
+import { Authorize, Controller, FromBody, FromParam, Get, Put } from "../router/router";
 
 @Controller()
 export class UserController {

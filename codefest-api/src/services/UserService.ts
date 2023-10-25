@@ -6,8 +6,8 @@ import bc from "bcrypt";
 import jwt from "jsonwebtoken";
 import { Conection } from '../database/Conection';
 import { IUser } from '../interfaces/user/IUser';
-import { IUserPost } from 'interfaces/user/IUserPost';
-import { IUserPut } from 'interfaces/user/IUserPut';
+import { IUserPost } from '../interfaces/user/IUserPost';
+import { IUserPut } from '../interfaces/user/IUserPut';
 
 export class UserService {
 
