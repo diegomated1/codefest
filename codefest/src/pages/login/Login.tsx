@@ -1,18 +1,15 @@
-import Navbar from "../../components/Nabar";
+import PrimaryButton from "../../components/Button";
+import CheckboxComponent from "../../components/CheckBox";
+import Input from "../../components/Input";
 
 export const Login = () => {
   return (
     <div>
-      import React from 'react';
       <form>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
+          <Input
+          nombre="Email"
           />
           <small id="emailHelp" className="form-text text-muted">
             We'll never share your email with anyone else.
@@ -20,26 +17,20 @@ export const Login = () => {
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
+          <Input
+          nombre="Contraseña"
           />
         </div>
         <div className="form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
+        <CheckboxComponent
+            nombre="hola"
+        />
           <label className="form-check-label" htmlFor="exampleCheck1">
             Check me out
           </label>
+{/*         <input type="checkbox" className="form-check-input" id="exampleCheck1" /> */}
         </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
+        <PrimaryButton/>
       </form>
     </div>
   );
