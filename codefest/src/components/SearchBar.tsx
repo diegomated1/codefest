@@ -2,7 +2,6 @@ import { ChangeEventHandler, FC } from "react";
 
 type SearchBarComponentType = {
   nombre: string;
-  onChange?: ChangeEventHandler<HTMLInputElement>;
 };
 
 const SearchBar: FC<SearchBarComponentType> = ({ nombre, onChange }) => {
