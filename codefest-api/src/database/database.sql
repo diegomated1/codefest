@@ -95,3 +95,23 @@ CREATE TABLE rate (
     FOREIGN KEY (groups_id) REFERENCES groups(id)
 );
 
+CREATE TABLE message_users (
+    id UUID NOT NULL,
+    sender_id UUID NOT NULL,
+    receiver_id UUID NOT NULL,
+    content TEXT,
+    created_date Date,
+    FOREIGN KEY (sender_id) REFERENCES users(id),
+    FOREIGN KEY (receiver_id) REFERENCES users(id)
+);
+
+CREATE TABLE message_group (
+    id UUID NOT NULL,
+    group_id UUID NOT NULL,
+    sender_id UUID NOT NULL,
+    content TEXT,
+    created_date Date,
+    FOREIGN KEY (group_id) REFERENCES groups(id),
+    FOREIGN KEY (sender_id) REFERENCES users(id)
+);
+

@@ -4,9 +4,9 @@ import { ServiceError } from '../utils/errors/service.error';
 import { PoolClient } from 'pg';
 import format from 'pg-format';
 import { QUERY_groupById, QUERY_groupByUserId } from './queries/Group';
-import { IUserGroup } from 'interfaces/group/IUserGroup';
-import { IGroupGet } from 'interfaces/group/IGruoupGet';
-import { IGroupPut } from 'interfaces/group/IGroupPut';
+import { IUserGroup } from '../interfaces/group/IUserGroup';
+import { IGroupGet } from '../interfaces/group/IGruoupGet';
+import { IGroupPut } from '../interfaces/group/IGroupPut';
 
 export class GroupModel {
     constructor(

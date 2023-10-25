@@ -13,7 +13,7 @@ export class GroupController {
   ) {
   }
 
-  @Get("", "Create group")
+  @Get("", "Get my group")
   async getMyGroups(req: Request, res: Response, next: NextFunction) {
     try {
       const { user_id } = res.locals;

@@ -13,6 +13,8 @@ import { UserService } from './services/UserService';
 import { UserController } from './controllers/UserController';
 import { GroupService } from './services/GroupService';
 import { GroupController } from './controllers/GroupController';
+import { ChatService } from './services/ChatService';
+import { ChatController } from './controllers/ChatController';
 types.setTypeParser(1700, function (val) {
     return parseFloat(val);
 });
@@ -30,17 +32,20 @@ function main(): App {
     const userService = new UserService(conection);
     const authService = new AuthService(conection);
     const groupService = new GroupService(conection);
+    const chatService = new ChatService(conection);
 
     // Controllers
     new UserController(userService);
     new GroupController(groupService);
     new AuthController(authService, userService);
+    new ChatController(chatService);
 
     router.addAuthMiddleware(AuthMiddleware);
     router.addService(userService);
     router.addService(authService);
     router.addService(groupService);
-
+    router.addService(chatService);
+    
     const app = new App(router.Router(), database);
     app.start();
     
