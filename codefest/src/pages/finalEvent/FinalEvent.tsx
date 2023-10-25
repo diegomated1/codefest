@@ -1,9 +1,6 @@
 
 import PrimaryButton from "../../components/Button"
-import ChatComponent from "../../components/ChatComponent"
-import Input from "../../components/Input"
-import InputDescription from "../../components/Input.desription"
-import PersonaAñadida from "../../components/PersonaAñadida"
+
 
 export const FinalEvent = () => {
     return (
@@ -30,37 +27,30 @@ export const FinalEvent = () => {
 
                 <div className="py-1">
                     <h3>Grupos</h3>
-                        <div className="d-flex container p-3 border border-black align-items-center mb-4">
-                            <p>Grupo de Proyecto 2</p>
+                    <div className="d-flex container p-3 border border-black align-items-center mb-4">
+                        <p>Grupo de Proyecto 2</p>
+                        <div id="rating1" className="star-rating px-3 mb-3" role="rating" data-rating="3">
+                            <span className="star" data-value="1">&#9733;<span className="star-notification"></span></span>
+                            <span className="star" data-value="2">&#9733;<span className="star-notification"></span></span>
+                            <span className="star" data-value="3">&#9733;<span className="star-notification"></span></span>
+                            <span className="star" data-value="4">&#9733;<span className="star-notification"></span></span>
+                            <span className="star" data-value="5">&#9733;<span className="star-notification"></span></span>
                         </div>
                     </div>
+                </div>
 
-                    <div className="form-outline mb-4">
-                        <Input nombre={"Nombre"} />
+                <div className="py-1">
+                    <h3>Comentarios</h3>
+                    <div className="d-flex flex-column container p-3 border border-black mb-4">
+                        <h6>Diego</h6>
+                        <p>kjbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
                     </div>
+                </div>
 
-                    <div className="form-outline mb-4">
-                        <InputDescription nombre={"Descripcion"} />
-                    </div>
-
-                    <div className="form-outline mb-4">
-                        <Input nombre={"Imágenes"} />
-                    </div>
-
-                    <div
-                        className="form-outline mb-4 d-flex flex-column"
-                    >
-                        <Input nombre={"Grupos Participantes"} />
-                        <PersonaAñadida nombre={"Pelea de botargas"} />
-                    </div>
-                    <div className="d-flex justify-content-around align-items-center mb-4">
-                        <PrimaryButton nombre={"Ingresar grupo"} />
-                    </div>
-
-                    {/* <div className="d-flex justify-content-around align-items-center mb-4">
-                                <PrimaryButton nombre={"Crear equipo"} />
-                            </div> */}
+                <div className="d-flex justify-content-start align-items-start mb-4">
+                    <PrimaryButton nombre={"Comentar"} />
                 </div>
             </div>
+        </div>
     )
 }
