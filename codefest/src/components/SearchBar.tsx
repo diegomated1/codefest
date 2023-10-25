@@ -1,10 +1,11 @@
 import { ChangeEventHandler, FC } from "react";
+import Button from "./Button";
 
 type SearchBarComponentType = {
   nombre: string;
 };
 
-const SearchBar: FC<SearchBarComponentType> = ({ nombre, onChange }) => {
+const SearchBar: FC<SearchBarComponentType> = ({ nombre }) => {
   return (
     <div className="input-group rounded">
       <input
@@ -14,9 +15,9 @@ const SearchBar: FC<SearchBarComponentType> = ({ nombre, onChange }) => {
         aria-label="Search"
         aria-describedby="search-addon"
       />
-      <span className="input-group-text border-0" id="search-addon">
-        <i className="fas fa-search"></i>
-      </span>
+    <Button nombre={"Buscar"}/>
     </div>
   );
 };
+
+export default SearchBar;

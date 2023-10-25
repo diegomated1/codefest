@@ -13,6 +13,7 @@ import { ProtectedRoutes } from "./ProtectedRoutes"
 import { TeamCreator } from "../pages/teamCreator/TeamCreator"
 import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin"
 import { ChatTeam } from "../pages/chatTeam/ChatTeam"
+import { SearchFriends } from "../pages/searchFriends/searchFriends"
 
 export const AppRoutes = () => {
   const { user, rol } = useAuth();
@@ -32,7 +33,9 @@ export const AppRoutes = () => {
 		<Route path={routes.configroupadmin} element={<ConfigGroupAdmin />} />
 		<Route path={routes.teamCreator} element={<TeamCreator />} />
 		<Route path={routes.teamChat} element={<ChatTeam />} />
-		
+		<Route path={routes.searchFriends} element={<SearchFriends />} />
+
+
         </Route>
         <Route path={routes.errors.E404} element={<Error404 />} />
         <Route path={routes.errors.E500} element={<Error500 />} />

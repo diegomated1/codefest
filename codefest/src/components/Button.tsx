@@ -1,14 +1,16 @@
 import { FC } from "react";
 
 type ButtonComponentType = {
-    nombre: string
-}
+  nombre: string;
+};
 
-const PrimaryButton: FC<ButtonComponentType> = ({
-nombre
-}) => {
+const PrimaryButton: FC<ButtonComponentType> = ({ nombre }) => {
   return (
-    <button type="submit" className="btn btn-primary btn-lg btn-block">{nombre}</button>
+    <div>
+      <button type="submit" className="btn btn-primary btn-md btn-block">
+        {nombre}
+      </button>
+    </div>
   );
 };
 
