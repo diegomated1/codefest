@@ -1,19 +1,20 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
-import { Layout } from "../layout"
-import { routes } from "./Routes"
-import { Root } from "../pages/root/Root"
-import { Login } from "../pages/login/Login"
-import { Register } from "../pages/register/Register"
-import { ConfigGroup } from "../pages/configroup/ConfigGroup"
-import { useAuth } from "../context/AuthProvider"
-import { Error404 } from "../pages/errors/Error404"
-import { Error500 } from "../pages/errors/Error500"
-import { PrivateRoutes } from "./PrivateRoutes"
-import { ProtectedRoutes } from "./ProtectedRoutes"
-import { TeamCreator } from "../pages/teamCreator/TeamCreator"
-import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin"
-import { ChatTeam } from "../pages/chatTeam/ChatTeam"
-import { SearchFriends } from "../pages/searchFriends/searchFriends"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { Layout } from "../layout";
+import { routes } from "./Routes";
+import { Root } from "../pages/root/Root";
+import { Login } from "../pages/login/Login";
+import { Register } from "../pages/register/Register";
+import { ConfigGroup } from "../pages/configroup/ConfigGroup";
+import { useAuth } from "../context/AuthProvider";
+import { Error404 } from "../pages/errors/Error404";
+import { Error500 } from "../pages/errors/Error500";
+import { PrivateRoutes } from "./PrivateRoutes";
+import { ProtectedRoutes } from "./ProtectedRoutes";
+import { TeamCreator } from "../pages/teamCreator/TeamCreator";
+import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin";
+import { ChatTeam } from "../pages/chatTeam/ChatTeam";
+import { EventCreate } from "../pages/createEvent/CreateEvent";
+import { SearchFriends } from "../pages/searchFriends/searchFriends";
 
 export const AppRoutes = () => {
   const { user, rol } = useAuth();
