@@ -16,27 +16,29 @@ import { ChatTeam } from "../pages/chatTeam/ChatTeam";
 import { EventCreate } from "../pages/createEvent/CreateEvent";
 
 export const AppRoutes = () => {
-	const { user, rol } = useAuth();
+  const { user, rol } = useAuth();
 
-	return (
-		<BrowserRouter>
-			<Routes>
-				<Route path={routes.login} element={<Login />} />
-				<Route path={routes.register} element={<Register />} />
-				<Route path={routes.eventcreate} element={<EventCreate />} />
-				<Route path={routes.configroup} element={<ConfigGroup />} />
-				<Route path={routes.configroupadmin} element={<ConfigGroupAdmin />} />
-				<Route element={<Layout />}>
-					{!user ?? <Route element={<PrivateRoutes />} />}
-					{rol == 0 ?? <Route element={<ProtectedRoutes />} />}
-					<Route path={routes.teamCreator} element={<TeamCreator />} />
-					<Route path={routes.teamChat} element={<ChatTeam />} />
-					<Route path={routes.root} element={<Root />} />
-				</Route>
-				<Route path={routes.errors.E404} element={<Error404 />} />
-				<Route path={routes.errors.E500} element={<Error500 />} />
-				<Route path="*" element={<Navigate to={routes.errors.E404} />} />
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path={routes.login} element={<Login />} />
+        <Route path={routes.register} element={<Register />} />
+
+        <Route element={<Layout />}>
+          {!user ?? <Route element={<PrivateRoutes />} />}
+          {rol == 0 ?? <Route element={<ProtectedRoutes />} />}
+
+        <Route path={routes.root} element={<Root />} />
+		<Route path={routes.configroup} element={<ConfigGroup />} />
+		<Route path={routes.configroupadmin} element={<ConfigGroupAdmin />} />
+		<Route path={routes.teamCreator} element={<TeamCreator />} />
+		<Route path={routes.teamChat} element={<ChatTeam />} />
+		
+        </Route>
+        <Route path={routes.errors.E404} element={<Error404 />} />
+        <Route path={routes.errors.E500} element={<Error500 />} />
+        <Route path="*" element={<Navigate to={routes.errors.E404} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };

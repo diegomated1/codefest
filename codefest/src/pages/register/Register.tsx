@@ -4,10 +4,10 @@ import PrimaryButton from "../../components/Button";
 import CheckboxComponent from "../../components/CheckBox";
 import Input from "../../components/Input";
 import ImageComponent from "../../components/LogoUPB";
-import { IUserRegister } from "../../interfaces/user/IUserPos";
+import { IUserPost } from "../../interfaces/user/IUserPost";
 
 export const Register = () => {
-  const [userRegister, setUserRegister] = useState<IUserRegister>({
+  const [userRegister, setUserRegister] = useState<IUserPost>({
     name: "",
     email: "",
     cel: "",

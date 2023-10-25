@@ -8,20 +8,9 @@ const Navbar = () => {
           src="https://20fisi.bucaramanga.upb.edu.co/assets/landing/img/logo_UPB_2022.png"
           className="img-fluid "
           alt="Phone image"
-          style={{objectFit: 'cover', height:'50px', width:'150'}}
+          style={{objectFit: 'cover', height:'50px', width:'150', paddingLeft:"2%"}}
         />
       </div>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
 
       <div className=" " id="navbarSupportedContent">
         <ul
