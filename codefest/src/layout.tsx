@@ -6,7 +6,7 @@ export const Layout: FC = () => {
     return (
         <div>
             <Navbar/>
-            <Outlet />
+            <Outlet/>
         </div>
     )
 }

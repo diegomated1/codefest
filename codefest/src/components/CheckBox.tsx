@@ -8,12 +8,10 @@ const CheckboxComponent: FC<CheckboxComponentType> = ({
     nombre
 }) => {
     return (
-      <div className="form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-        <label className="form-check-label" htmlFor="exampleCheck1">
-          {nombre}
-        </label>
-      </div>
+      <div className="form-check m-4">
+              <input className="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label className="form-check-label"> {nombre} </label>
+            </div>
     );
   };
 

@@ -9,6 +9,7 @@ import { Error404 } from "../pages/errors/Error404"
 import { Error500 } from "../pages/errors/Error500"
 import { PrivateRoutes } from "./PrivateRoutes"
 import { ProtectedRoutes } from "./ProtectedRoutes"
+import { TeamCreator } from "../pages/teamCreator/TeamCreator"
 
 export const AppRoutes = () => {
 
@@ -21,11 +22,13 @@ export const AppRoutes = () => {
 				<Route path={routes.register} element={<Register />} />
 				<Route element={<Layout />}>
 					{
-						(user) ?? <Route element={<PrivateRoutes/>} />
+						(!user) ?? <Route element={<PrivateRoutes/>} />
 					}
 					{
 						(rol == 0) ?? <Route element={<ProtectedRoutes />} />
 					}
+					            <Route path={routes.teamCreator} element={<TeamCreator/>} />
+
 					<Route path={routes.root} element={<Root />} />
 				</Route>
 				<Route path={routes.errors.E404} element={<Error404 />} />

@@ -6,12 +6,7 @@ type InputComponentType = {
 
 const Input: FC<InputComponentType> = ({ nombre }) => {
   return (
-    <div>
-      <label className="form-check-label" htmlFor="exampleCheck1">
-        {nombre}
-      </label>
-      <input name="myInput" className=""></input>
-    </div>
+    <><input type="email" id="form1Example13" className="form-control form-control-lg" /><label className="form-label">{nombre}</label></>
   );
 };
 
