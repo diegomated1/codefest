@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=tasklinkadmin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=TaskLink
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - pg
+
+networks:
+  pg:
+    name: pg
+    driver: bridge
+
+volumes:
+  postgres_data:
