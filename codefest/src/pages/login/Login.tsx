@@ -1,7 +1,15 @@
+import { useState } from "react";
 import PrimaryButton from "../../components/Button";
 import Input from "../../components/Input";
+import { IUserLoggin } from "../../interfaces/user/IUserPos";
 
 export const Login = () => {
+
+  const [userLogin, setUserLogin] = useState<IUserLoggin>({
+    email: "",
+    password: ""
+  });
+
   return (
     <section className="vh-100">
       <div className="container py-5 h-100">
@@ -21,11 +29,11 @@ export const Login = () => {
             />
             <form style={{ margin: "20px" }}>
               <div className="form-outline mb-4">
-                <Input nombre={"Correo electronico"} />
+                <Input nombre={"Correo electronico"} onChange={(e) => setUserLogin(u => ({...u, "email": e.target.value}))} />
               </div>
 
               <div className="form-outline mb-4">
-                <Input nombre={"Contraseña"} />
+                <Input nombre={"Contraseña"} onChange={(e) => setUserLogin(u => ({...u, "password": e.target.value}))}/>
               </div>
 
               <div className="d-flex justify-content-around align-items-center mb-4">

@@ -8,7 +8,6 @@ export const Layout: FC = () => {
         <div>
             <Navbar/>
             <Outlet/>
-            <ChatSideBar />
         </div>
     )
 }

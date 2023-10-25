@@ -1,10 +1,23 @@
+import { useState } from "react";
 import Button from "../../components/Button";
 import PrimaryButton from "../../components/Button";
 import CheckboxComponent from "../../components/CheckBox";
 import Input from "../../components/Input";
 import ImageComponent from "../../components/LogoUPB";
+import { IUserRegister } from "../../interfaces/user/IUserPos";
 
 export const Register = () => {
+  const [userRegister, setUserRegister] = useState<IUserRegister>({
+    name: "",
+    email: "",
+    cel: "",
+    password: "",
+  });
+
+  const [userConfirmPass, setUserConfirmPass] = useState("");
+
+  const [userTerms, setUserTerms] = useState(false);
+
   return (
     <section className="vh-100">
       <div className="container py-5 h-100">
@@ -24,26 +37,53 @@ export const Register = () => {
             />
             <form style={{ margin: "20px" }}>
               <div className="form-outline mb-4">
-                <Input nombre={"Nombre"} />
+                <Input
+                  nombre={"Nombre"}
+                  onChange={(e) =>
+                    setUserRegister((u) => ({ ...u, name: e.target.value }))
+                  }
+                />
               </div>
 
               <div className="form-outline mb-4">
-                <Input nombre={"Correo Electronico"} />
+                <Input
+                  nombre={"Correo Electronico"}
+                  onChange={(e) =>
+                    setUserRegister((u) => ({ ...u, email: e.target.value }))
+                  }
+                />
               </div>
 
               <div className="form-outline mb-4">
-                <Input nombre={"Celular"} />
+                <Input
+                  nombre={"Celular"}
+                  onChange={(e) =>
+                    setUserRegister((u) => ({ ...u, cel: e.target.value }))
+                  }
+                />
               </div>
 
               <div className="form-outline mb-4">
-                <Input nombre={"Contraseña"} />
+                <Input
+                  nombre={"Contraseña"}
+                  onChange={(e) =>
+                    setUserRegister((u) => ({ ...u, password: e.target.value }))
+                  }
+                />
               </div>
 
               <div className="form-outline mb-4">
-                <Input nombre={"Confirmar Contraseña"} />
+                <Input
+                  nombre={"Confirmar Contraseña"}
+                  onChange={(e) => setUserConfirmPass(e.target.value)}
+                />
               </div>
 
-              <CheckboxComponent nombre={"Aceptar terminos y condiciones"}/>
+              <CheckboxComponent
+                nombre={"Aceptar terminos y condiciones"}
+                onChange={(e) => setUserTerms((t) => !t)}
+                value={userTerms}
+              />
 
               <div className="d-flex justify-content-around align-items-center mb-4">
                 <PrimaryButton nombre={"Registrarse"} />

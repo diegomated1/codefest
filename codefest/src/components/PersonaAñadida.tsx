@@ -4,10 +4,10 @@ type PersonaAñadida = {
   nombre: string;
 };
 
-const Input: FC<PersonaAñadida> = ({ nombre }) => {
+const PersonaAñadida: FC<PersonaAñadida> = ({ nombre }) => {
   return (
-    <><label className="form-label">{nombre}</label></>
+    <><h5 className="form-label text-primary" style={{color:'#'}}>{nombre}</h5></>
   );
 };
 
-export default Input;
+export default PersonaAñadida;
