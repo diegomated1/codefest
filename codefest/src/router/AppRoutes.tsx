@@ -4,12 +4,14 @@ import { routes } from "./Routes"
 import { Root } from "../pages/root/Root"
 import { Login } from "../pages/login/Login"
 import { Register } from "../pages/register/Register"
+import { ConfigGroup } from "../pages/configroup/ConfigGroup"
 import { useAuth } from "../context/AuthProvider"
 import { Error404 } from "../pages/errors/Error404"
 import { Error500 } from "../pages/errors/Error500"
 import { PrivateRoutes } from "./PrivateRoutes"
 import { ProtectedRoutes } from "./ProtectedRoutes"
 import { TeamCreator } from "../pages/teamCreator/TeamCreator"
+import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin"
 
 export const AppRoutes = () => {
 
@@ -20,6 +22,8 @@ export const AppRoutes = () => {
 			<Routes>
 				<Route path={routes.login} element={<Login />} />
 				<Route path={routes.register} element={<Register />} />
+				<Route path={routes.configroup} element={<ConfigGroup />} />
+				<Route path={routes.configroupadmin} element={<ConfigGroupAdmin />} />
 				<Route element={<Layout />}>
 					{
 						(!user) ?? <Route element={<PrivateRoutes/>} />
