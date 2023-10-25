@@ -1,7 +1,3 @@
-import { useState } from "react";
-import PrimaryButton from "../../components/Button";
-import Input from "../../components/Input";
-import { IUserLoggin } from "../../interfaces/user/IUserPos";
 import Chat from "../../components/Chat";
 
 export const ChatTeam = () => {
