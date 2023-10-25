@@ -49,7 +49,7 @@ export class MessageModel {
                 const values = Object.values(message);
 
                 const query = `INSERT INTO message_users (${columns}) VALUES (${placeholders}) RETURNING *`;
-                console.log(query);
+
                 const result = await this.client.query<IMessage>(query, values);
                 const _message = result.rows[0];
                 res(_message);
@@ -68,7 +68,7 @@ export class MessageModel {
                 const values = Object.values(message);
 
                 const query = `INSERT INTO message_group (${columns}) VALUES (${placeholders}) RETURNING *`;
-                console.log(query);
+
                 const result = await this.client.query<IMessageGroup>(query, values);
                 const _message = result.rows[0];
                 res(_message);

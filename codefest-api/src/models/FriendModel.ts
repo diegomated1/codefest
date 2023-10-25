@@ -36,7 +36,6 @@ export class FriendModel {
                 const query = "INSERT INTO friend (user_id, friend_id) VALUES ($1, $2)";
                 const values = [user_id, friend_id];
                 const result = await this.client.query(query, values);
-                console.log(result)
                 const _res = result.rowCount;
                 res(_res);
             } catch (error) {

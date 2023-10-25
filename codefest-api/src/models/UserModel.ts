@@ -27,7 +27,6 @@ export class UserModel {
         return new Promise(async (res, rej) => {
             if(!this.client) throw new ServiceError("Error de conexion");
             try {
-                console.log(email)
                 const query = 'SELECT * FROM users WHERE email = $1';
                 const values = [email];
                 const result = await this.client.query<IUser>(query, values);
@@ -62,7 +61,7 @@ export class UserModel {
                 const values = Object.values(user);
 
                 const query = `INSERT INTO users (${columns}) VALUES (${placeholders}) RETURNING *`;
-                console.log(query);
+
                 const result = await this.client.query<IUser>(query, values);
                 const _user = result.rows[0];
                 res(_user);
