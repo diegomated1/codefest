@@ -13,8 +13,8 @@ export const FinalEvent = () => {
                     </span>
                 </div>
 
-                <img src="https://20fisi.bucaramanga.upb.edu.co/assets/landing/img/logo_UPB_2022.png" className="mx-auto d-block img-fluid" />
-
+                {/* <img src="https://20fisi.bucaramanga.upb.edu.co/assets/landing/img/logo_UPB_2022.png" className="mx-auto d-block img-fluid" /> */}
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5JSRGhB-nM?si=0RPfdeV5JSYWNuwZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
                 <div className="py-5">
                     <h3>Descripción</h3>
                     <p className="text-muted">
