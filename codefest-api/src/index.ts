@@ -15,6 +15,9 @@ import { GroupService } from './services/GroupService';
 import { GroupController } from './controllers/GroupController';
 import { ChatService } from './services/ChatService';
 import { ChatController } from './controllers/ChatController';
+import { FriendService } from './services/FriendService';
+import { FollowService } from './services/FollowService';
+
 types.setTypeParser(1700, function (val) {
     return parseFloat(val);
 });
@@ -33,9 +36,11 @@ function main(): App {
     const authService = new AuthService(conection);
     const groupService = new GroupService(conection);
     const chatService = new ChatService(conection);
+    const friendService = new FriendService(conection);
+    const followService = new FollowService(conection);
 
     // Controllers
-    new UserController(userService);
+    new UserController(userService, followService, friendService);
     new GroupController(groupService);
     new AuthController(authService, userService);
     new ChatController(chatService);
@@ -45,6 +50,8 @@ function main(): App {
     router.addService(authService);
     router.addService(groupService);
     router.addService(chatService);
+    router.addService(friendService);
+    router.addService(followService);
     
     const app = new App(router.Router(), database);
     app.start();
