@@ -14,6 +14,7 @@ import { TeamCreator } from "../pages/teamCreator/TeamCreator";
 import { ConfigGroupAdmin } from "../pages/configroupadmin/ConfigGroupAdmin";
 import { ChatTeam } from "../pages/chatTeam/ChatTeam";
 import { EventCreate } from "../pages/createEvent/CreateEvent";
+import { FinalEvent } from "../pages/finalEvent/FinalEvent";
 import { SearchFriends } from "../pages/searchFriends/searchFriends";
 
 export const AppRoutes = () => {
@@ -32,8 +33,11 @@ export const AppRoutes = () => {
         <Route path={routes.root} element={<Root />} />
 		<Route path={routes.configroup} element={<ConfigGroup />} />
 		<Route path={routes.configroupadmin} element={<ConfigGroupAdmin />} />
+		<Route path={routes.eventcreate} element={<EventCreate />} />
 		<Route path={routes.teamCreator} element={<TeamCreator />} />
 		<Route path={routes.teamChat} element={<ChatTeam />} />
+		<Route path={routes.finalevent} element={<FinalEvent />} />
+		
 		<Route path={routes.searchFriends} element={<SearchFriends />} />
 
 

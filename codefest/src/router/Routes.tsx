@@ -5,6 +5,7 @@ export const routes = {
 	"configroup": "/configroup",
 	"configroupadmin": "/configroupadmin",
 	"eventcreate": "/eventcreate",
+	"finalevent": "/finalevent",
 	"dashboard": "/dashboard",
 	"teamCreator": "/team/creator",
 	"teamChat": "/team/chat",
