@@ -54,12 +54,15 @@ CREATE TABLE user_groups (
 
 CREATE TABLE event (
     id UUID PRIMARY KEY,
+    title TEXT,
     description TEXT,
     location VARCHAR(50) NOT NULL,
     creator_id UUID NOT NULL,
     created_date TIMESTAMP NOT NULL,
     start_date TIMESTAMP NOT NULL,
     end_date TIMESTAMP NOT NULL,
+    groups_id TEXT[],
+    urlEvent VARCHAR(100) NOT NULL,
     FOREIGN KEY (creator_id) REFERENCES users(id)
 );
 
