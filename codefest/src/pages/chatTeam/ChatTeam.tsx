@@ -3,12 +3,8 @@ import PrimaryButton from "../../components/Button";
 import Input from "../../components/Input";
 import { IUserLoggin } from "../../interfaces/user/IUserPos";
 
-export const Login = () => {
+export const ChatTeam = () => {
 
-  const [userLogin, setUserLogin] = useState<IUserLoggin>({
-    email: "",
-    password: ""
-  });
 
   return (
     <section className="vh-100">
@@ -27,13 +23,9 @@ export const Login = () => {
               className="img-fluid"
               alt="Phone image"
             />
-            <form style={{ margin: "20px" }}>
+            <form style={{ margin: "20px", display:'flex'}}>
               <div className="form-outline mb-4">
-                <Input nombre={"Correo electronico"} onChange={(e) => setUserLogin(u => ({...u, "email": e.target.value}))} />
-              </div>
-
-              <div className="form-outline mb-4">
-                <Input nombre={"Contraseña"} onChange={(e) => setUserLogin(u => ({...u, "password": e.target.value}))}/>
+                <Input nombre={"Contraseña"}/>
               </div>
 
               <div className="d-flex justify-content-around align-items-center mb-4">
