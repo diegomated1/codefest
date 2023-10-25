@@ -1,5 +1,4 @@
-import AnclaNavbar from "./anclasNabvar";
-
+import AnclaNavbar from "./AnclasNabvar";
 
 const Navbar = () => {
   return (

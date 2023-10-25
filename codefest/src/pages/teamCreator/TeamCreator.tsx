@@ -1,7 +1,8 @@
 import PrimaryButton from "../../components/Button";
 import Input from "../../components/Input";
 import InputDescription from "../../components/Input.desription";
-import AnclaNavbar from "../../components/anclasNabvar";
+import PersonaAñadida from "../../components/PersonaAñadida";
+import AnclaNavbar from "../../components/AnclasNabvar";
 
 export const TeamCreator = () => {
   return (
@@ -21,10 +22,12 @@ export const TeamCreator = () => {
 
               <div
                 className="form-outline mb-4"
-                style={{ display: "flex", flexDirection: "column" }}
+                style={{ display: "flex", flexDirection: "column"}}
               >
                 <Input nombre={"Ingrese los usuarios"} />
+                <PersonaAñadida nombre={"Kevin David Quintana"}/>
                 <PrimaryButton nombre={"Ingresar usuario"} />
+                
               </div>
 
               <div className="d-flex justify-content-around align-items-center mb-4">
